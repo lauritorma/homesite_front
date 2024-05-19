@@ -1,20 +1,21 @@
 /* styles/style.css */
 
 /* Base styles for large screens */
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-
-.body {
-    padding-bottom: 20px;
+body {
+    margin: 0;
+    
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .page-container {
     display: flex;
     flex-direction: row;
-    min-height: 100vh; /* Changed to vh for consistency */
+    min-height: 100vh;
     background-color: rgb(5, 32, 28);
     justify-content: flex-end;
+    box-sizing: border-box;
 }
 
 .main-content-container {
@@ -40,7 +41,6 @@
 }
 
 .text-icon-flex {
-    /* background-color: white; */
     height: 7vh;
     width: 15vh;
     display: flex;
@@ -96,7 +96,6 @@
 }
 
 .sub-content-container {
-    /* background-color: #cfcc09; */
     height: 20vh;
     width: 40vh;
     align-items: center;
@@ -119,10 +118,13 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        padding: 10px; /* Add padding to avoid edge clipping */
     }
 
     .main-content-container {
         padding-right: 0; /* Remove right padding */
+        padding-left: 10px; /* Add some padding on the left */
+        width: 100%; /* Make it full width */
     }
 
     .sub-content-container {
@@ -130,28 +132,67 @@
         bottom: 0; /* Move to the bottom */
         width: 100%;
         height: auto;
-        padding: 20px;
+        padding: 10px; /* Reduce padding for smaller screens */
     }
 
+    .main-header {
+        font-size: 2em; /* Reduce font size */
+    }
 
+    .intro-text {
+        font-size: 1em; /* Reduce font size */
+        padding: 10px; /* Add some padding */
+    }
+
+    .icons-container {
+        height: auto;
+        width: 100%;
+        flex-direction: row; /* Adjust direction if needed */
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: center; /* Center the icons */
+        padding-bottom: 40px;
+        /* background-color: green; */
+    }
+
+    .social-container {
+        display: flex;
+        flex-direction: row;
+        /* background-color: red; */
+    }
+
+    .text-icon-flex {
+        height: 5vh; /* Reduce height */
+        width: auto; /* Adjust width */
+         
+    }
 
     .spotify {
         display: flex;
-        flex-direction: row;
-        height: 10vh;
-        gap: 10px;
-        padding-top: 20px;
-        padding-bottom: 10px;
+        flex-direction: column;
+        height: auto;
+     
+    }
+
+    .animated-image {
+        width: 80%;
+        height: 80%;
+        object-fit: cover;
+        border-radius: 160px;
     }
 
     .h2 {
-        color: white;
-        font-weight: 300;
-        font-family: 'Open Sans', sans-serif;
-        font-size: medium;
+        font-size: medium; /* Reduce font size */
     }
 
     .header-container {
         margin-top: 20px;
+    }
+
+    .link-text {
+        color: white;
+        text-decoration: none;
+        font-weight: 300;
+        font-family: 'Open Sans', sans-serif;
+        visibility: hidden;
     }
 }
